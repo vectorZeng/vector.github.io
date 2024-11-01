@@ -1,28 +1,139 @@
-<!DOCTYPE html>  
-<html lang="zh">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>个人主页 - vector</title>  
-    <style>  
-        body {  
-            background-color: #333333; /* 深灰色背景 */  
-            color: white; /* 文字颜色 */  
-            font-family: Arial, sans-serif; /* 字体 */  
-            text-align: center; /* 居中对齐 */  
-            padding: 50px; /* 内边距 */  
-        }  
-        h1 {  
-            font-size: 2.5em; /* 标题大小 */  
-        }  
-        p {  
-            font-size: 1.2em; /* 段落文字大小 */  
-        }  
-    </style>  
-</head>  
-<body>  
-    <h1>你好，我是 vector</h1>  
-    <h2>尚且学艺不精(bushi)</h2> 
-    <p>等我有时间再好好学学怎么写HTML</p>  
-</body>  
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页 - vector</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        .skills, .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .skill, .project {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 20px;
+            width: 45%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>你好，我是 vector</h1>
+        <p>尚且学艺不精(bushi)</p>
+    </header>
+    <nav>
+        <a href="#about">关于我</a>
+        <a href="#skills">技能</a>
+        <a href="#projects">项目</a>
+        <a href="#contact">联系我</a>
+    </nav>
+    <div class="container">
+        <section id="about" class="section">
+            <h2>关于我</h2>
+            <p>我是一个热爱编程和技术的开发者，正在不断学习和成长中。</p>
+        </section>
+        <section id="skills" class="section">
+            <h2>技能</h2>
+            <div class="skills">
+                <div class="skill">
+                    <h3>HTML & CSS</h3>
+                    <p>熟练掌握HTML和CSS，能够创建响应式和美观的网页。</p>
+                </div>
+                <div class="skill">
+                    <h3>JavaScript</h3>
+                    <p>熟悉JavaScript，能够使用它来实现动态交互效果。</p>
+                </div>
+                <div class="skill">
+                    <h3>Python</h3>
+                    <p>掌握Python编程语言，能够进行数据分析和自动化任务。</p>
+                </div>
+                <div class="skill">
+                    <h3>Git</h3>
+                    <p>熟悉Git版本控制系统，能够进行代码管理和协作开发。</p>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="section">
+            <h2>项目</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>项目一</h3>
+                    <p>这是一个关于项目一的简短描述。</p>
+                </div>
+                <div class="project">
+                    <h3>项目二</h3>
+                    <p>这是一个关于项目二的简短描述。</p>
+                </div>
+                <div class="project">
+                    <h3>项目三</h3>
+                    <p>这是一个关于项目三的简短描述。</p>
+                </div>
+                <div class="project">
+                    <h3>项目四</h3>
+                    <p>这是一个关于项目四的简短描述。</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="section">
+            <h2>联系我</h2>
+            <p>你可以通过以下方式联系我：</p>
+            <p>Email: vector@example.com</p>
+            <p>GitHub: <a href="https://github.com/vector" target="_blank">github.com/vector</a></p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2023 vector. 保留所有权利。</p>
+    </footer>
+</body>
 </html>
