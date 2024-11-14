@@ -1,177 +1,42 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人主页 - vector</title>
-    <style>
-        body {
-            background-color: #f4f4f4;
-            color: #333;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #444;
-            position: relative;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        nav li {
-            position: relative;
-        }
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-transform: uppercase;
-            display: block;
-        }
-        nav a:hover {
-            background-color: #555;
-        }
-        nav ul ul {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #444;
-            padding: 0;
-        }
-        nav ul ul li {
-            width: 200px;
-        }
-        nav ul ul a {
-            padding: 10px;
-        }
-        nav ul li:hover > ul {
-            display: block;
-        }
-        .container {
-            padding: 20px;
-        }
-        .section {
-            margin: 20px 0;
-        }
-        .section h2 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-        }
-        .skills, .projects {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .skill, .project {
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin: 10px;
-            padding: 20px;
-            width: 45%;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>你好，我是 vector</h1>
-        <p>尚且学艺不精(bushi)</p>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#about">关于我</a></li>
-            <li>
-                <a href="#skills">技能</a>
-                <ul>
-                    <li><a href="#html-css">HTML & CSS</a></li>
-                    <li><a href="#javascript">JavaScript</a></li>
-                    <li><a href="#python">Python</a></li>
-                    <li><a href="#git">Git</a></li>
-                </ul>
-            </li>
-            <li><a href="#projects">项目</a></li>
-            <li><a href="#contact">联系我</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <section id="about" class="section">
-            <h2>关于我</h2>
-            <p>我是一个热爱编程和技术的开发者，正在不断学习和成长中。</p>
-        </section>
-        <section id="skills" class="section">
-            <h2>技能</h2>
-            <div class="skills">
-                <div class="skill" id="html-css">
-                    <h3>HTML & CSS</h3>
-                    <p>熟练掌握HTML和CSS，能够创建响应式和美观的网页。</p>
-                </div>
-                <div class="skill" id="javascript">
-                    <h3>JavaScript</h3>
-                    <p>熟悉JavaScript，能够使用它来实现动态交互效果。</p>
-                </div>
-                <div class="skill" id="python">
-                    <h3>Python</h3>
-                    <p>掌握Python编程语言，能够进行数据分析和自动化任务。</p>
-                </div>
-                <div class="skill" id="git">
-                    <h3>Git</h3>
-                    <p>熟悉Git版本控制系统，能够进行代码管理和协作开发。</p>
-                </div>
-            </div>
-        </section>
-        <section id="projects" class="section">
-            <h2>项目</h2>
-            <div class="projects">
-                <div class="project">
-                    <h3>项目一</h3>
-                    <p>这是一个关于项目一的简短描述。</p>
-                </div>
-                <div class="project">
-                    <h3>项目二</h3>
-                    <p>这是一个关于项目二的简短描述。</p>
-                </div>
-                <div class="project">
-                    <h3>项目三</h3>
-                    <p>这是一个关于项目三的简短描述。</p>
-                </div>
-                <div class="project">
-                    <h3>项目四</h3>
-                    <p>这是一个关于项目四的简短描述。</p>
-                </div>
-            </div>
-        </section>
-        <section id="contact" class="section">
-            <h2>联系我</h2>
-            <p>你可以通过以下方式联系我：</p>
-            <p>Email: vector@example.com</p>
-            <p>GitHub: <a href="https://github.com/vector" target="_blank">github.com/vector</a></p>
-        </section>
-    </div>
-    <footer>
-        <p>&copy; 2023 vector. 保留所有权利。</p>
-    </footer>
-</body>
-</html>
+---
+layout: page
+description: "Thinking will not overcome fear but action will."
+---
+
+{% for post in paginator.posts %}
+<div class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        <h2 class="post-title">
+            {{ post.title }}
+        </h2>
+        {% if post.subtitle %}
+        <h3 class="post-subtitle">
+            {{ post.subtitle }}
+        </h3>
+        {% endif %}
+        <div class="post-content-preview">
+            {{ post.content | strip_html | truncate:200 }}
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+    </p>
+</div>
+<hr>
+{% endfor %}
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
+    {% if paginator.previous_page %}
+    <li class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+    </li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}
