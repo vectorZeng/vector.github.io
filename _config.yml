@@ -1,6 +1,6 @@
 # Site settings
 title: Vector Blog
-SEOTitle: Vector的碎碎念 | BY Blog
+SEOTitle: Vector的碎碎念 | Vec Blog
 header-img: img/post-bg-desk.jpg
 email: zkh@cug.edu.cn
 description: "Every failure is leading towards success."
@@ -8,6 +8,7 @@ keyword: "Vector, 啦啦啦，碎碎念"
 url: "http://vectorzeng.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/vectorzeng/vectorzeng.github.io.git" # you code repository
+
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
@@ -99,11 +100,11 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "WY",
-        href: "http://zhengwuyang.com"
+        title: "VEC",
+        href: "https://vectorzeng.github.io/"
     },{
-        title: "简书·BY",
-        href: "http://www.jianshu.com/u/e71990ada2fd"
+        title: "INS",
+        href: "https://www.instagram.com/vectorzen1124/"
     },{
         title: "Apple",
         href: "https://apple.com"
