@@ -1,12 +1,8 @@
 {
-  "users": [
-    {
-      "username": "userA",
-      "password": "passwordA"
-    },
-    {
-      "username": "userB",
-      "password": "passwordB"
-    }
-  ]
+  "UserA": {
+    "password": "passwordA"
+  },
+  "UserB": {
+    "password": "passwordB"
+  }
 }
